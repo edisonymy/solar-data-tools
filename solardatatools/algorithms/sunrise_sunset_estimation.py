@@ -254,7 +254,7 @@ class SunriseSunset:
                 ho_error.append(np.average(run_ho_errors))
                 if groundtruth is not None:
                     full_fit = rise_set_smoothed(
-                        measured, sunrise_tau=0.05, sunset_tau=0.95
+                        measured, sunrise_tau=0.05, sunset_tau=0.95, solver = solver
                     )
                     sr_full = full_fit["sunrises"]
                     ss_full = full_fit["sunsets"]
